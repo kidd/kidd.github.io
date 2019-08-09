@@ -1,0 +1,64 @@
+baseURL = "http://raimonster.com/"
+languageCode = "en-us"
+title = "Raimon Grau"
+theme = "personal-web"
+
+[params.intro]
+  main = "Hello, I'm Raimonster"
+  sub = "Human being and software developer"
+
+[params]
+  breadcrumb = true
+
+[params.sidebar]
+  backgroundImage = '' # header background image - default "/images/default_sidebar.jpg" - Photo by Tim Marshall on Unsplash
+  gradientOverlay = '' # default: rgba(0,0,0,0.4),rgba(0,0,0,0.4)
+  logo = "/images/rai.png"
+
+[params.social]
+  github = "https://github.com/kidd"
+  linkedin = "https://www.linkedin.com/in/raimon-grau-837ba91a/"
+  gitlab = "https://gitlab.com/rgrau"
+  keybase = "https://keybase.io/rgrau_kong"
+  read = "https://www.goodreads.com/user/show/69378962-raimon-grau"
+  # pencil = "https://puntoblogspot.blogspot.com"
+
+[params.contact]
+  email = "raimonster@gmail.com"
+  text= "raimonster@gmail.com" # text of the contact link in the sidebar. If email params.contact.email is defined
+
+[menu]
+[[menu.main]]
+
+  identifier = "about"
+  name = "About"
+  title = "About section"
+  url = "/"
+  weight = -120
+
+[[menu.main]]
+  identifier = "portfolio"
+  name = "Portfolio"
+  title = "Portfolio"
+  url = "/portfolio/"
+  weight = -110
+
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Post"
+  title = "Blog section"
+  url = "/post/"
+  weight = -100
+
+[[menu.main]]
+  identifier = "old-blog"
+  name = "Old blog"
+  title = "Old blog"
+  url = "https://puntoblogspot.blogspot.com/"
+  weight = -99
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5

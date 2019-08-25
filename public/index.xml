@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>Emacs DashDocs</title>
+      <link>/portfolio/dash-docs/dash-docs/</link>
+      <pubDate>Sat, 24 Aug 2019 13:42:19 +0100</pubDate>
+      
+      <guid>/portfolio/dash-docs/dash-docs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tech Lead Software Developer @Kong</title>
+      <link>/portfolio/kong/</link>
+      <pubDate>Sat, 24 Aug 2019 13:42:19 +0100</pubDate>
+      
+      <guid>/portfolio/kong/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>This site</title>
       <link>/post/learning-hugo/</link>
       <pubDate>Wed, 21 Aug 2019 22:04:22 +0100</pubDate>
@@ -21,12 +39,12 @@
     </item>
     
     <item>
-      <title>hello fucking world</title>
+      <title>Hello World!</title>
       <link>/post/hello-world/</link>
       <pubDate>Mon, 12 Aug 2019 10:39:18 +0100</pubDate>
       
       <guid>/post/hello-world/</guid>
-      <description>hooola joder noe?</description>
+      <description>Hello, world!</description>
     </item>
     
   </channel>

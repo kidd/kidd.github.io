@@ -8,8 +8,8 @@ techs: ["elisp"]
 thumbnail: dash-docs/helm-dash.gif
 projectUrl: http://www.konghq.com
 testimonial:
-  name: Toni
+  name: @areina
   role: Coauthor
-  image: dash-docs/john.jpg
+  image: dash-docs/areina.jpeg
   text: I'm still using it to this day
 ---

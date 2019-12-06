@@ -26,6 +26,42 @@ order.
 - https://gohugo.io/templates/views/
 - https://gohugo.io/templates/lookup-order/
 
+### Loading of templates
+
+Here's my understanding of the templating stuff as of today 2019-09-03:
+
+In your content tree you have directories (e.g. `content/foo/`). hugo
+renders http://yourdomain.com/foo using _index.md files, cascading
+from `/themes/mytheme/_layouts/foo/_index.md`,
+`/_layouts/foo/_index.md`, and finally `/content/foo/_index.md`.
+
+From one to the next you can "yield" (rails) using `{{.Content}}`.
+
+Homepage is a bit special.
+
+### Code snippets
+
+https://gohugo.io/content-management/syntax-highlighting/
+
+https://gohugo.io/templates/shortcode-templates/
+```
+    local foo = bar
+    for k, v in map(t) do
+      print(k, v)
+    end
+```
+
+To highlight code, use this shortcode (delete the marked whitespaces)
+
+```
+{{ < highlight lua >}}
+  ^ local foo = bar
+    for k, v in map(t) do
+      print(k, v)
+  v end
+{{ < /highlight >}}
+```
+
 
 ### Tags
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolios on Raimon Grau</title>
+    <link>/portfolio/</link>
+    <description>Recent content in Portfolios on Raimon Grau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Aug 2019 17:10:40 +0100</lastBuildDate>
+    
+	<atom:link href="/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Software developer -&gt; Team lead</title>
+      <link>/portfolio/3scale/</link>
+      <pubDate>Mon, 26 Aug 2019 17:10:40 +0100</pubDate>
+      
+      <guid>/portfolio/3scale/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tech Lead Software Developer @Kong</title>
+      <link>/portfolio/kong/</link>
+      <pubDate>Sat, 24 Aug 2019 13:42:19 +0100</pubDate>
+      
+      <guid>/portfolio/kong/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Developer</title>
+      <link>/portfolio/ravenpack/</link>
+      <pubDate>Fri, 25 Aug 2017 20:37:26 +0100</pubDate>
+      
+      <guid>/portfolio/ravenpack/</guid>
+      <description>Experienced Common Lisp professionally for the first time. An experience difficult to forget.
+Working in an AI (nlp) platform extracting structured info from unstructured text.
+Appart from working on the maintenance of one of the main tools, I started from scratch a real time api with a pubub model where subscribers connect to an endpoint adding a custom filter in the querystring, and automatically creating (or assigning if already existed) a channel with live news matching the filters.</description>
+    </item>
+    
+    <item>
+      <title>Emacs DashDocs</title>
+      <link>/portfolio/dash-docs/dash-docs/</link>
+      <pubDate>Sun, 24 Aug 2014 13:42:19 +0100</pubDate>
+      
+      <guid>/portfolio/dash-docs/dash-docs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

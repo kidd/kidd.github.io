@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2019-08-21T22:04:22&#43;01:00" />
 <meta itemprop="dateModified" content="2019-08-21T22:04:22&#43;01:00" />
-<meta itemprop="wordCount" content="191">
+<meta itemprop="wordCount" content="292">
 
 
 
@@ -50,7 +50,7 @@
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='/images/rai.png' alt="Profile Who am I?" class="rounded-logo">
+        <img src='/images/rai.png' alt="Profile Portfolios" class="rounded-logo">
       </a>
     </div>
     <h2>Hello, I'm Raimonster</h2>
@@ -204,7 +204,7 @@
   </svg>
 </div>
 
-  <span>1 minutes</span>
+  <span>2 minutes</span>
 </div>
 
 <div class="published-date">
@@ -228,13 +228,13 @@
 better already.</p>
 
 <p>Apparently hugo uses 2 types of pages: List and Single pages. Homepage
-is a bit different than others. It is technically a List page, it can
-have its own template at layouts/index.html</p>
+is a bit different than others. It is technically a List page, and it
+can have its own template at layouts/index.html.</p>
 
-<p>And the flow goes from layout, to the page you are looking at.</p>
+<p>And the render flow goes from layout, to the page you are looking at.</p>
 
-<p>To find out what _index.md, look at the lists example and the lookup
-order.</p>
+<p>To find out what happens when rendering, look at the lists example and
+the lookup order in those docs:</p>
 
 <ul>
 <li><a href="https://gohugo.io/templates/homepage/">https://gohugo.io/templates/homepage/</a></li>
@@ -247,12 +247,13 @@ order.</p>
 
 <p>Here&rsquo;s my understanding of the templating stuff as of today 2019-09-03:</p>
 
-<p>In your content tree you have directories (e.g. <code>content/foo/</code>). hugo
+<p>In your content tree you have directories (e.g. <code>/content/foo/</code>). hugo
 renders <a href="http://yourdomain.com/foo">http://yourdomain.com/foo</a> using _index.md files, cascading
-from <code>/themes/mytheme/_layouts/foo/_index.md</code>,
-<code>/_layouts/foo/_index.md</code>, and finally <code>/content/foo/_index.md</code>.</p>
+from <code>/themes/used-theme/_layouts/foo/_index.md</code>,
+<code>/layouts/foo/_index.md</code>, and finally <code>/content/foo/_index.md</code>.</p>
 
-<p>From one to the next you can &ldquo;yield&rdquo; (rails) using <code>{{.Content}}</code>.</p>
+<p>From one to the next you can &ldquo;yield&rdquo; (in rails parlance) using
+<code>{{.Content}}</code>.</p>
 
 <p>Homepage is a bit special.</p>
 
@@ -271,11 +272,21 @@ from <code>/themes/mytheme/_layouts/foo/_index.md</code>,
 <p>To highlight code, use this shortcode (delete the marked whitespaces)</p>
 
 <pre><code>{{ &lt; highlight lua &gt;}}
-  ^ local foo = bar
+--^
+    local foo = bar
     for k, v in map(t) do
       print(k, v)
-  v end
+    end
+--v
 {{ &lt; /highlight &gt;}}
+</code></pre>
+
+<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#75715e">--^</span>
+    <span style="color:#66d9ef">local</span> foo <span style="color:#f92672">=</span> bar
+    <span style="color:#66d9ef">for</span> k, v <span style="color:#66d9ef">in</span> map(t) <span style="color:#66d9ef">do</span>
+      print(k, v)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#75715e">--v</span></code></pre></div>
 </code></pre>
 
 <h3 id="tags">Tags</h3>
@@ -285,6 +296,22 @@ from <code>/themes/mytheme/_layouts/foo/_index.md</code>,
 <ul>
 <li><a href="https://gohugo.io/templates/taxonomy-templates/#example-list-tags-in-a-single-page-template">https://gohugo.io/templates/taxonomy-templates/#example-list-tags-in-a-single-page-template</a></li>
 </ul>
+
+<h3 id="deploy">Deploy</h3>
+
+<p>I started by hosting this site in a server of my own, with a dead
+simple Makefile that <code>scp</code>&rsquo;d the <code>/public</code> directory. But if the site
+is 100% static, I then moved it to github pages.  If you want to use a
+custom domain, you have to take steps further, that even if they are
+trival, if you do them once every 2 years, you inevitably foret them.</p>
+
+<h3 id="cloudflare">Cloudflare</h3>
+
+<p>For DNS and SSL.</p>
+
+<h3 id="git-subtree">git subtree</h3>
+
+<p><a href="https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec">https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec</a></p>
 
 
     </main>

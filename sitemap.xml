@@ -3,16 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/constraint-programming-with-screamer/</loc>
-    <lastmod>2020-05-30T02:42:21+01:00</lastmod>
+    <loc>/post/2020-05-30-fridge-o-mattic/</loc>
+    <lastmod>2020-05-30T23:43:53+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-05-30T02:42:21+01:00</lastmod>
+    <lastmod>2020-05-30T23:43:53+01:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/constraint-programming-with-screamer/</loc>
+    <lastmod>2020-05-30T02:42:21+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>

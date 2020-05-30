@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Fridge-O-Mattic</title>
+      <link>/post/2020-05-30-fridge-o-mattic/</link>
+      <pubDate>Sat, 30 May 2020 23:43:53 +0100</pubDate>
+      
+      <guid>/post/2020-05-30-fridge-o-mattic/</guid>
+      <description>Parts:  arduino uno Ultrasonic Distance Sensor (HC-SR04) 2 leds buzzer? lcd screen a fridge MAGNETS! (of course, the secret sauce)  
+Story Small hacky project where by installing an arduino with some very basic sensors, you can detect when the fridge&amp;rsquo;s door is left open.
+Maybe you can relate, maybe not, but the fridge at my new place has some issues when closing the door, and sometimes it doesn&amp;rsquo;t close properly (you have to make sure every time it&amp;rsquo;s been properly closed, and not 99% closed)</description>
+    </item>
+    
+    <item>
       <title>Constraint Programming with CL Screamer</title>
       <link>/post/constraint-programming-with-screamer/</link>
       <pubDate>Sat, 30 May 2020 02:42:21 +0100</pubDate>

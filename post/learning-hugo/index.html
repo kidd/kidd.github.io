@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2019-08-21T22:04:22&#43;01:00" />
 <meta itemprop="dateModified" content="2019-08-21T22:04:22&#43;01:00" />
-<meta itemprop="wordCount" content="292">
+<meta itemprop="wordCount" content="378">
 
 
 
@@ -311,7 +311,29 @@ trival, if you do them once every 2 years, you inevitably foret them.</p>
 
 <h3 id="git-subtree">git subtree</h3>
 
-<p><a href="https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec">https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec</a></p>
+<p>so this site is hosted in a repo &lsquo;personal-site&rsquo;, where the root of
+the hugo site is the root of the repo.</p>
+
+<p>As the <code>/public</code> directory is what I want published in
+<code>kidd.github.io</code>, I created a subtree from that dir:</p>
+
+<pre><code>git subtree add --prefix=public git@github.com:kidd/kidd.github.io.git master
+</code></pre>
+
+<p>Then, when running <code>hugo</code>, the <code>/public</code> repo gets populated. Usual
+commit into personal-site (which commits the changes in the current
+repo), and then</p>
+
+<pre><code>git subtree push --prefix=public git@github.com:kidd/kidd.github.io.git master
+</code></pre>
+
+<p>To actually publish it. Here&rsquo;s some info on subtrees.</p>
+
+<ul>
+<li><a href="https://dev.to/letsbsocial1/deploying-to-gh-pages-with-git-subtree">https://dev.to/letsbsocial1/deploying-to-gh-pages-with-git-subtree</a></li>
+<li><a href="https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec">https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/git-subtree">https://www.atlassian.com/git/tutorials/git-subtree</a></li>
+</ul>
 
 
     </main>

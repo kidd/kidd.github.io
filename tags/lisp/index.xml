@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Raimon Grau</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on Raimon Grau</description>
+    <title>lisp on Raimon Grau</title>
+    <link>/tags/lisp/</link>
+    <description>Recent content in lisp on Raimon Grau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 May 2020 02:42:21 +0100</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/lisp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,24 +20,6 @@
       <description>I&amp;rsquo;ve been wanting to get into Lisp again and last week it came to my hands a problem that looked like a perfect case for giving CL another try.
 The problem is about a very special sudoku with only 4 initial values. The sudoku has, of course special rules:
  The square in the middle is a magic square (all rows,columns, and digonals add up the same). Both diagonals of the board can&amp;rsquo;t have repeated numbers.</description>
-    </item>
-    
-    <item>
-      <title>This site</title>
-      <link>/post/learning-hugo/</link>
-      <pubDate>Wed, 21 Aug 2019 22:04:22 +0100</pubDate>
-      
-      <guid>/post/learning-hugo/</guid>
-      <description>Setting up this website</description>
-    </item>
-    
-    <item>
-      <title>Hello World!</title>
-      <link>/post/hello-world/</link>
-      <pubDate>Mon, 12 Aug 2019 10:39:18 +0100</pubDate>
-      
-      <guid>/post/hello-world/</guid>
-      <description>Hello, world!</description>
     </item>
     
   </channel>

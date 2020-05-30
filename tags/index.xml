@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Raimon Grau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Aug 2019 22:04:22 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2020 02:42:21 +0100</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>lisp</title>
+      <link>/tags/lisp/</link>
+      <pubDate>Sat, 30 May 2020 02:42:21 +0100</pubDate>
+      
+      <guid>/tags/lisp/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>

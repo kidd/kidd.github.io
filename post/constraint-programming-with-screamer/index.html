@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'><head>
-  <title>Who am I? - Raimon Grau</title>
-  <link rel='canonical' href='/about/' />
+  <title>Constraint Programming with CL Screamer - Raimon Grau</title>
+  <link rel='canonical' href='/post/constraint-programming-with-screamer/' />
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <meta name='description' content='' />
@@ -21,16 +21,28 @@
 
   <link rel="stylesheet" href="custom.css" media="screen">
 
-  <meta property="og:title" content="Who am I?" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/about/" />
+  <meta property="og:title" content="Constraint Programming with CL Screamer" />
+<meta property="og:description" content="I&rsquo;ve been wanting to get into Lisp again and last week it came to my hands a problem that looked like a perfect case for giving CL another try.
+The problem is about a very special sudoku with only 4 initial values. The sudoku has, of course special rules:
+ The square in the middle is a magic square (all rows,columns, and digonals add up the same). Both diagonals of the board can&rsquo;t have repeated numbers." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/constraint-programming-with-screamer/" />
+<meta property="article:published_time" content="2020-05-30T02:42:21+01:00" />
+<meta property="article:modified_time" content="2020-05-30T02:42:21+01:00" />
 
-<meta property="og:updated_time" content="2019-08-23T01:31:54+01:00" />
+  <meta itemprop="name" content="Constraint Programming with CL Screamer">
+<meta itemprop="description" content="I&rsquo;ve been wanting to get into Lisp again and last week it came to my hands a problem that looked like a perfect case for giving CL another try.
+The problem is about a very special sudoku with only 4 initial values. The sudoku has, of course special rules:
+ The square in the middle is a magic square (all rows,columns, and digonals add up the same). Both diagonals of the board can&rsquo;t have repeated numbers.">
 
-  <meta itemprop="name" content="Who am I?">
-<meta itemprop="description" content="">
 
+<meta itemprop="datePublished" content="2020-05-30T02:42:21&#43;01:00" />
+<meta itemprop="dateModified" content="2020-05-30T02:42:21&#43;01:00" />
+<meta itemprop="wordCount" content="274">
+
+
+
+<meta itemprop="keywords" content="lisp," />
 
 </head>
 <body>
@@ -154,55 +166,110 @@
 
 
 
+
+
 <span >
   <a href="/">Raimonster</a>
    / 
 </span>
 
 
+<span >
+  <a href="/post/">Posts</a>
+   / 
+</span>
+
+
 <span  class="active">
-  <a href="/about/">Who am I?</a>
+  <a href="/post/constraint-programming-with-screamer/">Constraint Programming with CL Screamer</a>
   
 </span>
 
 </div>
 
     
-    <main id="content" class="about">
+    <main id="content" class="post">
 
-  <h1 id="title"> Who am I?</h1>
-  <p><p>This is me</p>
+<h1>Constraint Programming with CL Screamer</h1>
 
-<p>I&rsquo;m Raimon Grau, a software developer born in Barcelona and currently
-living in Tenerife. I love reading, programming, and good
-conversations.</p>
 
-<p>I&rsquo;m working as a software developer at
-<a href="https://konghq.com">Kong</a>. Btw, we&rsquo;re hiring. If you happen to like
-and know Lua, OpenResty, HTTP, shell, docker,&hellip; shoot me an
-<a href="mailto:raimonster@gmail.com">email</a> and we might have a talk.</p>
 
-<p>I&rsquo;ve programmed professionally in Common Lisp in this current century,
-and that&rsquo;s something not many people can say. I&rsquo;m very happy and
-proud about that.</p>
 
-<p>I try to find solutions to problems in a minimalistic and suckless
-way. I&rsquo;ve done Bash, Common Lisp, Lua, Perl, Ruby for a living. But I&rsquo;m
-interested in maaany other languages.</p>
 
-<ul>
-<li>I used to blog at
-<a href="https://puntoblogspot.blogspot.com">https://puntoblogspot.blogspot.com</a>. Now
-<a href="https://www.raimonster.com">https://www.raimonster.com</a> is my home.</li>
-<li>My github is <a href="https://github.com/kidd">kidd</a>.</li>
-<li>My Resume is in <a href="https://github.com/kidd/Me">here</a>.</li>
-<li>My <a href="https://www.linkedin.com/in/raimon-grau-837ba91a/">LinkedIn</a>.</li>
-<li>Say &ldquo;hi&rdquo; at <a href="emailto:raimonster@gmail.com">raimonster@gmail.com</a>.</li>
-</ul>
-</p>
-  <ul id="list">
-    
-  </ul>
+
+
+
+<div class="reading-time">
+  <div class="icon">
+  <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+  
+  <path d="M57.5 11C29.05 11 6 34.05 6 62.5S29.05 114 57.5 114 109 90.95 109 62.5 85.95 11 57.5 11zm0 93.032c-22.947 0-41.532-18.585-41.532-41.532 0-22.947 18.585-41.532 41.532-41.532 22.947 0 41.532 18.585 41.532 41.532 0 22.947-18.585 41.532-41.532 41.532zm12.833-21.68L52.703 69.54a2.508 2.508 0 0 1-1.018-2.015V33.427a2.5 2.5 0 0 1 2.492-2.492h6.646a2.5 2.5 0 0 1 2.492 2.492v29.426l13.871 10.092c1.122.81 1.35 2.368.54 3.49l-3.904 5.377a2.51 2.51 0 0 1-3.489.54z"/>
+  
+  </svg>
+</div>
+
+  <span>2 minutes</span>
+</div>
+
+<div class="published-date">
+  <div class="icon">
+  <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+  
+  <path d="M77.577 51.23a1.807 1.807 0 0 0-2.2.342l-27.562 27.79a1.807 1.807 0 0 1-2.2.342l-14.008-9.702a1.807 1.807 0 0 0-2.2.342l-1.952 1.968c-.287.22-.456.568-.455.936.001.37.172.716.46.934L45.637 86.77a1.807 1.807 0 0 0 2.2-.342l31.709-31.97c.287-.22.456-.567.455-.936a1.175 1.175 0 0 0-.46-.933l-1.963-1.36z"/><path d="M97.304 20H80.512c-.041.34-.063.683-.064 1.026a5.986 5.986 0 0 0 1.256 4.1c.054.003.103.02.157.025a4.881 4.881 0 0 1 1.865-.025c3.05.562 4.984 3.907 4.32 7.47-.666 3.563-3.678 5.996-6.728 5.433a4.932 4.932 0 0 1-2.437-1.258c-6.018-1.378-10.445-7.795-10.445-15.745 0-.347.023-.685.04-1.026H34.579c-.041.34-.063.683-.064 1.026a5.986 5.986 0 0 0 1.256 4.1c.054.003.103.02.157.025a4.881 4.881 0 0 1 1.865-.025c3.05.562 4.984 3.907 4.32 7.47-.666 3.563-3.678 5.996-6.728 5.433a4.932 4.932 0 0 1-2.437-1.258c-6.018-1.378-10.445-7.795-10.445-15.745 0-.22.019-.434.025-.652a9.788 9.788 0 0 0-5.697 4.471 9.683 9.683 0 0 0-2.65 4.764L1.158 92.871c-.965 4.689 2.6 8.503 7.948 8.503h6.334v2.673c-.077 5.41 4.263 9.861 9.705 9.953h72.16c5.438-.095 9.774-4.546 9.694-9.953V29.953c.08-5.407-4.256-9.858-9.695-9.953zM10.078 96.653c-2.378 0-3.964-1.697-3.535-3.782L16.637 43.84h80.787L87.331 92.871a5.254 5.254 0 0 1-5.091 3.782H10.078zm91.535 7.394c.036 2.403-1.891 4.382-4.308 4.424h-72.16c-2.42-.04-4.352-2.018-4.32-4.424v-2.673h60.443c5.348 0 10.484-3.814 11.449-8.503l8.897-43.215v54.391z"/><path d="M34.814 33c1.243 0 2.251-1.057 2.251-2.36 0-1.305-1.008-2.362-2.25-2.362-2.04 0-4.313-3.194-4.313-7.778s2.272-7.778 4.312-7.778c1.227 0 2.536 1.163 3.386 3.084H43C41.716 11.19 38.578 8 34.814 8 29.871 8 26 13.49 26 20.5c0 7.009 3.871 12.5 8.814 12.5z"/>
+  
+  </svg>
+</div>
+
+  <span>May 30, 2020</span>
+</div>
+
+
+<p>I&rsquo;ve been wanting to get into Lisp again and last week it came to my
+hands a problem that looked like a perfect case for giving CL another
+try.</p>
+
+<p>The problem is about a very special sudoku with only 4 initial
+values. The sudoku has, of course special rules:</p>
+
+<ol>
+<li>The square in the middle is a magic square (all rows,columns, and
+digonals add up the same).</li>
+<li>Both diagonals of the board can&rsquo;t have repeated numbers.</li>
+<li>any cell can&rsquo;t be the same number as any of it&rsquo;s chess
+knight-distance peers.</li>
+</ol>
+
+<p>The solution is <a href="https://www.youtube.com/watch?v=hAyZ9K2EBF0">here</a>.</p>
+
+<p>Anyway, I didn&rsquo;t want to solve it by hand, so I started thinking how
+to do it, and remembered a few recent screamer posts I read, so I gave
+a shoot to it.</p>
+
+<p>Here&rsquo;s the simple solution for solving the magic square using
+Constraint Programming.</p>
+
+<pre><code class="language-lisp">   (one-value
+     (let ((a (an-integer-between 1 9))
+           (b (an-integer-between 1 9))
+           (c (an-integer-between 1 9))
+           (d (an-integer-between 1 9))
+           (e (an-integer-between 1 9))
+           (f (an-integer-between 1 9))
+           (g (an-integer-between 1 9))
+           (h (an-integer-between 1 9))
+           (i (an-integer-between 1 9)))
+       (if (and (= (+ a b c) (+ d e f) (+ g h i)
+                   (+ a d g) (+ b e h) (+ c f i)
+                   (+ a e i) (+ g e c))
+                (/=v a b c d e f g h i))
+           (list a b c d e f g h i)
+           (fail))))   ; =&gt; (2 7 6 9 5 1 4 3 8)
+</code></pre>
+
+<p>Very nice to use automatic backtracking for solving any kind of
+problem: The <code>fail</code> function, <code>/=</code>, and <code>one-value</code> communicate what&rsquo;s
+the state of the world and decide to try other values.</p>
+
 
     </main>
   </div>

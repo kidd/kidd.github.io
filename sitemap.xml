@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/constraint-programming-with-screamer/</loc>
+    <lastmod>2020-05-30T02:42:21+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-05-30T02:42:21+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-05-30T02:42:21+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/lisp/</loc>
+    <lastmod>2020-05-30T02:42:21+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/portfolio/</loc>
     <lastmod>2019-08-26T17:10:40+01:00</lastmod>
     <priority>0</priority>
@@ -27,18 +52,6 @@
     <lastmod>2019-08-23T01:31:54+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2019-08-21T22:04:22+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-08-21T22:04:22+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

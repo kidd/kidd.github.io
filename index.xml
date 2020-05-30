@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Constraint Programming with CL Screamer</title>
+      <link>/post/constraint-programming-with-screamer/</link>
+      <pubDate>Sat, 30 May 2020 02:42:21 +0100</pubDate>
+      
+      <guid>/post/constraint-programming-with-screamer/</guid>
+      <description>I&amp;rsquo;ve been wanting to get into Lisp again and last week it came to my hands a problem that looked like a perfect case for giving CL another try.
+The problem is about a very special sudoku with only 4 initial values. The sudoku has, of course special rules:
+ The square in the middle is a magic square (all rows,columns, and digonals add up the same). Both diagonals of the board can&amp;rsquo;t have repeated numbers.</description>
+    </item>
+    
+    <item>
       <title>Software developer -&gt; Team lead</title>
       <link>/portfolio/3scale/</link>
       <pubDate>Mon, 26 Aug 2019 17:10:40 +0100</pubDate>

@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Dynamic libs with Nix&#43;Racket</title>
+      <link>/post/2020-07-05-racket-and-nix/</link>
+      <pubDate>Sun, 05 Jul 2020 17:45:12 +0100</pubDate>
+      
+      <guid>/post/2020-07-05-racket-and-nix/</guid>
+      <description>When installing a package with nix-shell, you get a temporary profile that contains everything that was on your parent profile (where you ran nix-shell) plus the installed packages from that nix-shell command.
+nixpkgs repo is big and generally ok, but there are hurdles here and there, that you must be able to jump if you want to walk least-walked-paths.
+Let&amp;rsquo;s see what happens (from my dimm understanding still) when you install a dynamic library that is not directly linked from your installed packages.</description>
+    </item>
+    
+    <item>
       <title>Fridge-O-Mattic</title>
       <link>/post/2020-05-30-fridge-o-mattic/</link>
       <pubDate>Sat, 30 May 2020 23:43:53 +0100</pubDate>

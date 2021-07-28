@@ -8,7 +8,7 @@
   <meta name='theme-color' content='black' />
   
 
-  <meta name="generator" content="Hugo 0.56.3" />
+  <meta name="generator" content="Hugo 0.86.0" />
 
   
 
@@ -16,7 +16,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/style.min.8a1658d134a4b54730b66789206b2cf14c1b006a6de3f3fde6302f925b6e01f5.css" integrity="sha256-ihZY0TSktUcwtmeJIGss8UwbAGpt4/P95jAvkltuAfU=" media="screen">
+<link rel="stylesheet" href="/sass/style.min.ac3b29eee9e254302a04aca44260f19f19da7d1d3a16e2dbb3e8a152ad617046.css" integrity="sha256-rDsp7uniVDAqBKykQmDxnxnafR06FuLbs&#43;ihUq1hcEY=" media="screen">
 <link rel="stylesheet" href="/syntax.min.css" integrity="" media="screen">
 
   <link rel="stylesheet" href="custom.css" media="screen">
@@ -24,22 +24,16 @@
   <meta property="og:title" content="Dynamic libs with Nix&#43;Racket" />
 <meta property="og:description" content="Figuring out how to get libgit2 into racket using nix" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/2020-07-05-racket-and-nix/" />
+<meta property="og:url" content="/post/2020-07-05-racket-and-nix/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-07-05T17:45:12+01:00" />
 <meta property="article:modified_time" content="2020-07-05T17:45:12+01:00" />
 
+
   <meta itemprop="name" content="Dynamic libs with Nix&#43;Racket">
-<meta itemprop="description" content="Figuring out how to get libgit2 into racket using nix">
-
-
-<meta itemprop="datePublished" content="2020-07-05T17:45:12&#43;01:00" />
-<meta itemprop="dateModified" content="2020-07-05T17:45:12&#43;01:00" />
+<meta itemprop="description" content="Figuring out how to get libgit2 into racket using nix"><meta itemprop="datePublished" content="2020-07-05T17:45:12+01:00" />
+<meta itemprop="dateModified" content="2020-07-05T17:45:12+01:00" />
 <meta itemprop="wordCount" content="511">
-
-
-
 <meta itemprop="keywords" content="" />
-
 </head>
 <body>
 
@@ -50,7 +44,7 @@
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='/images/rai.png' alt="Profile Posts" class="rounded-logo">
+        <img src='/images/rai.png' alt="Profile Raimonster" class="rounded-logo">
       </a>
     </div>
     <h2>Hello, I'm Raimonster</h2>
@@ -187,9 +181,6 @@
     <main id="content" class="post">
 
 <h1>Dynamic libs with Nix&#43;Racket</h1>
-
-
-
 <div class="reading-time">
   <div class="icon">
   <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
@@ -214,88 +205,56 @@
   <span>July 5, 2020</span>
 </div>
 
-
 <p>When installing a package with nix-shell, you get a temporary profile
 that contains everything that was on your parent profile (where you
 ran <code>nix-shell</code>) plus the installed packages from that nix-shell
 command.</p>
-
 <p>nixpkgs repo is big and generally ok, but there are hurdles here and
 there, that you must be able to jump if you want to walk
 least-walked-paths.</p>
-
 <p>Let&rsquo;s see what happens (from my dimm understanding still) when you
 install a dynamic library that is not directly linked from your
 installed packages.</p>
-
 <p>I was trying to do a testrun of racket&rsquo;s
 <a href="https://docs.racket-lang.org/libgit2/index.html">libgit2</a> library.</p>
-
 <p>The first attempt failed, because racket couldn&rsquo;t find the <code>.so</code>.</p>
-
 <pre><code>&gt; (require libgit2)
 . . ../../../../nix/store/rlw4h5mibwyavzhr1mscr95ibzl17i52-racket-7.7/share/racket/collects/ffi/unsafe.rkt:131:0: ffi-lib: couldn't open &quot;libgit2.so.0.26.0&quot; (libgit2.so.0.26.0: cannot open shared object file: No such file or directory)
-</code></pre>
-
-<p>Instant thought was to install the library using <code>nix-shell -p
-libgit2</code>, but the error was the same.</p>
-
-<pre><code class="language-bash">$ ls $LD_LIBRARY_PATH | grep libgit    # &lt;- no results
-</code></pre>
-
-<p>So, somehow the library is not added to the LD_LIBRARY_PATH.</p>
-
+</code></pre><p>Instant thought was to install the library using <code>nix-shell -p libgit2</code>, but the error was the same.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls $LD_LIBRARY_PATH | grep libgit    <span style="color:#75715e"># &lt;- no results</span>
+</code></pre></div><p>So, somehow the library is not added to the LD_LIBRARY_PATH.</p>
 <p>Let&rsquo;s go first for the easy path.</p>
-
-<pre><code class="language-bash">$ nix-env -i libgit2
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nix-env -i libgit2
 $ drracket
-</code></pre>
-
-<p>This just works, so we have a last resort solution. But nix-env is not
+</code></pre></div><p>This just works, so we have a last resort solution. But nix-env is not
 cool, and we want to learn how to disentangle the whole thing!</p>
-
 <p>Looking at more walked paths, I installed <code>pygit2</code> to see what python
 does:</p>
-
-<pre><code class="language-bash">$ nix-shell -p python37Packages.pygit2
-$ python -c 'import pygit2'
-$ ls $LD_LIBRARY_PATH | grep libgit    # &lt;- no results
-</code></pre>
-
-<p>And this one worked, but the library is not in the library path
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nix-shell -p python37Packages.pygit2
+$ python -c <span style="color:#e6db74">&#39;import pygit2&#39;</span>
+$ ls $LD_LIBRARY_PATH | grep libgit    <span style="color:#75715e"># &lt;- no results</span>
+</code></pre></div><p>And this one worked, but the library is not in the library path
 either. Let&rsquo;s see how git proper gets the library&hellip;</p>
-
 <p><code>ldd -v =git | grep libgit  # &lt;- no results</code></p>
-
 <p>Note: <code>=git</code> is a zshism for <code>$(whereis git | cut -f2 -f' ')</code>.</p>
-
 <p>Shit. At this point, I&rsquo;m not sure if the <code>git</code> binary is compiled
 statically or something. Let&rsquo;s open the nixpkgs repo and see:</p>
-
 <p>The files we&rsquo;re mostly concerned about are:</p>
-
 <ul>
 <li><a href="https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/python-modules/pygit2/default.nix">https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/python-modules/pygit2/default.nix</a></li>
 <li><a href="https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/version-management/git-and-tools/git/default.nix">https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/version-management/git-and-tools/git/default.nix</a></li>
 <li><a href="https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/libraries/git2/default.nix">https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/libraries/git2/default.nix</a></li>
 </ul>
-
 <p>In the first one, the python libgit binding, we see it depends on libgit package.</p>
-
 <p>The second one, the git cli binary, we see no mentions to libgit2, so
 I imagine it compiles everything statically, and that&rsquo;s why we didn&rsquo;t
 see anything in the ldd command. The only suspicious thing we see is that</p>
-
 <pre><code>  preConfigure = lib.optionalString stdenv.isDarwin ''
     export DYLD_LIBRARY_PATH=&quot;${libgit2}/lib&quot;
   '';
-</code></pre>
-
-<p>Third one is the libgit2 package itself. But there&rsquo;s not much you can
+</code></pre><p>Third one is the libgit2 package itself. But there&rsquo;s not much you can
 get from it.</p>
-
 <p>So time to read a bit more:</p>
-
 <ul>
 <li><a href="https://github.com/NixOS/nixpkgs/issues/56860">https://github.com/NixOS/nixpkgs/issues/56860</a></li>
 <li><a href="https://github.com/uniphil/nix-for-devs#os-library-dependencies">https://github.com/uniphil/nix-for-devs#os-library-dependencies</a></li>
@@ -303,7 +262,6 @@ get from it.</p>
 <li><a href="https://www.reddit.com/r/NixOS/comments/4e9r8x/what_goes_in_lb_library_path/">https://www.reddit.com/r/NixOS/comments/4e9r8x/what_goes_in_lb_library_path/</a></li>
 <li><a href="https://unix.stackexchange.com/questions/190719/how-to-use-libraries-installed-by-nix-at-run-time">https://unix.stackexchange.com/questions/190719/how-to-use-libraries-installed-by-nix-at-run-time</a></li>
 </ul>
-
 <p>So it seems for libraries that are not tied to anything in your
 environment, you have to manually add them to your
 LD_LIBRARY_PATH. It&rsquo;s a bit of a bummer, but it kinda
@@ -311,14 +269,10 @@ works. <code>$(nix-build '&lt;nixpkgs&gt;' -A libgit2)</code> this builds the li
 and links a &lsquo;result&rsquo; directory to the built lib. We currently don&rsquo;t
 care about the <code>result</code> directory, but we want to add that built lib
 to the LD_LIBRARY_PATH.</p>
-
-<pre><code class="language-bash">$ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(nix-build '&lt;nixpkgs&gt;' -A libgit2)/lib
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ LD_LIBRARY_PATH<span style="color:#f92672">=</span>$LD_LIBRARY_PATH:<span style="color:#66d9ef">$(</span>nix-build <span style="color:#e6db74">&#39;&lt;nixpkgs&gt;&#39;</span> -A libgit2<span style="color:#66d9ef">)</span>/lib
 $ drracket
-(require libgit2)    ; WORKSSS!!
-</code></pre>
-
-<p>A way to build this into your own shell.nix files is like this:</p>
-
+<span style="color:#f92672">(</span>require libgit2<span style="color:#f92672">)</span>    ; WORKSSS!!
+</code></pre></div><p>A way to build this into your own shell.nix files is like this:</p>
 <pre><code>with import &lt;nixpkgs&gt; {};
 
 stdenv.mkDerivation {
@@ -333,7 +287,6 @@ stdenv.mkDerivation {
 }
 </code></pre>
 
-
     </main>
   </div>
   <footer>
@@ -346,4 +299,3 @@ stdenv.mkDerivation {
   
 </body>
 </html>
-

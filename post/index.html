@@ -8,7 +8,7 @@
   <meta name='theme-color' content='black' />
   
 
-  <meta name="generator" content="Hugo 0.56.3" />
+  <meta name="generator" content="Hugo 0.86.0" />
 
   
 
@@ -16,7 +16,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/style.min.8a1658d134a4b54730b66789206b2cf14c1b006a6de3f3fde6302f925b6e01f5.css" integrity="sha256-ihZY0TSktUcwtmeJIGss8UwbAGpt4/P95jAvkltuAfU=" media="screen">
+<link rel="stylesheet" href="/sass/style.min.ac3b29eee9e254302a04aca44260f19f19da7d1d3a16e2dbb3e8a152ad617046.css" integrity="sha256-rDsp7uniVDAqBKykQmDxnxnafR06FuLbs&#43;ihUq1hcEY=" media="screen">
 <link rel="stylesheet" href="/syntax.min.css" integrity="" media="screen">
 
   <link rel="stylesheet" href="custom.css" media="screen">
@@ -26,12 +26,9 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/post/" />
 
-<meta property="og:updated_time" content="2020-07-05T17:45:12+01:00" />
 
   <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
-
-
 </head>
 <body>
 
@@ -42,7 +39,7 @@
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='/images/rai.png' alt="Profile Posts" class="rounded-logo">
+        <img src='/images/rai.png' alt="Profile Raimonster" class="rounded-logo">
       </a>
     </div>
     <h2>Hello, I'm Raimonster</h2>
@@ -179,6 +176,9 @@
   <h2>
     <a href="/post/2020-07-05-racket-and-nix/">Dynamic libs with Nix&#43;Racket</a>
   </h2>
+  <p>When installing a package with nix-shell, you get a temporary profile that contains everything that was on your parent profile (where you ran nix-shell) plus the installed packages from that nix-shell command.
+nixpkgs repo is big and generally ok, but there are hurdles here and there, that you must be able to jump if you want to walk least-walked-paths.
+Let&rsquo;s see what happens (from my dimm understanding still) when you install a dynamic library that is not directly linked from your installed packages.</p>
   <div class="read-more">
     <a alt="Dynamic libs with Nix&#43;Racket" href="/post/2020-07-05-racket-and-nix/" /><div class="icon">
   <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
@@ -191,12 +191,13 @@
     Read more</a>
   </div>
 </div>
-
     
       <div class="post-container">
   <h2>
     <a href="/post/2020-05-30-fridge-o-mattic/">Fridge-O-Mattic</a>
   </h2>
+  <p>Parts:  arduino uno Ultrasonic Distance Sensor (HC-SR04) 2 leds buzzer? lcd screen a fridge MAGNETS! (of course, the secret sauce)  Story Small hacky project where by installing an arduino with some very basic sensors, you can detect when the fridge&rsquo;s door is left open.
+Maybe you can relate, maybe not, but the fridge at my new place has some issues when closing the door, and sometimes it doesn&rsquo;t close properly (you have to make sure every time it&rsquo;s been properly closed, and not 99% closed)</p>
   <div class="read-more">
     <a alt="Fridge-O-Mattic" href="/post/2020-05-30-fridge-o-mattic/" /><div class="icon">
   <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
@@ -209,12 +210,14 @@
     Read more</a>
   </div>
 </div>
-
     
       <div class="post-container">
   <h2>
     <a href="/post/constraint-programming-with-screamer/">Constraint Programming with CL Screamer</a>
   </h2>
+  <p>I&rsquo;ve been wanting to get into Lisp again and last week it came to my hands a problem that looked like a perfect case for giving CL another try.
+The problem is about a very special sudoku with only 4 initial values. The sudoku has, of course special rules:
+ The square in the middle is a magic square (all rows,columns, and digonals add up the same). Both diagonals of the board can&rsquo;t have repeated numbers.</p>
   <div class="read-more">
     <a alt="Constraint Programming with CL Screamer" href="/post/constraint-programming-with-screamer/" /><div class="icon">
   <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
@@ -227,12 +230,12 @@
     Read more</a>
   </div>
 </div>
-
     
       <div class="post-container">
   <h2>
     <a href="/post/learning-hugo/">This site</a>
   </h2>
+  <p>Setting up this website</p>
   <div class="read-more">
     <a alt="This site" href="/post/learning-hugo/" /><div class="icon">
   <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
@@ -245,12 +248,12 @@
     Read more</a>
   </div>
 </div>
-
     
       <div class="post-container">
   <h2>
     <a href="/post/hello-world/">Hello World!</a>
   </h2>
+  <p>Hello, world!</p>
   <div class="read-more">
     <a alt="Hello World!" href="/post/hello-world/" /><div class="icon">
   <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
@@ -263,7 +266,6 @@
     Read more</a>
   </div>
 </div>
-
     
   </div>
 

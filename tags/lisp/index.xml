@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lisp on Raimon Grau</title>
@@ -6,11 +6,7 @@
     <description>Recent content in lisp on Raimon Grau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2020 02:42:21 +0100</lastBuildDate>
-    
-	<atom:link href="/tags/lisp/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 30 May 2020 02:42:21 +0100</lastBuildDate><atom:link href="/tags/lisp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Constraint Programming with CL Screamer</title>
       <link>/post/constraint-programming-with-screamer/</link>

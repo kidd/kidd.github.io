@@ -8,7 +8,7 @@
   <meta name='theme-color' content='black' />
   
 
-  <meta name="generator" content="Hugo 0.56.3" />
+  <meta name="generator" content="Hugo 0.86.0" />
 
   
 
@@ -16,7 +16,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/style.min.8a1658d134a4b54730b66789206b2cf14c1b006a6de3f3fde6302f925b6e01f5.css" integrity="sha256-ihZY0TSktUcwtmeJIGss8UwbAGpt4/P95jAvkltuAfU=" media="screen">
+<link rel="stylesheet" href="/sass/style.min.ac3b29eee9e254302a04aca44260f19f19da7d1d3a16e2dbb3e8a152ad617046.css" integrity="sha256-rDsp7uniVDAqBKykQmDxnxnafR06FuLbs&#43;ihUq1hcEY=" media="screen">
 <link rel="stylesheet" href="/syntax.min.css" integrity="" media="screen">
 
   <link rel="stylesheet" href="custom.css" media="screen">
@@ -24,22 +24,16 @@
   <meta property="og:title" content="Fridge-O-Mattic" />
 <meta property="og:description" content="Arduino helping you at the kitchen" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/2020-05-30-fridge-o-mattic/" />
+<meta property="og:url" content="/post/2020-05-30-fridge-o-mattic/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-05-30T23:43:53+01:00" />
 <meta property="article:modified_time" content="2020-05-30T23:43:53+01:00" />
 
+
   <meta itemprop="name" content="Fridge-O-Mattic">
-<meta itemprop="description" content="Arduino helping you at the kitchen">
-
-
-<meta itemprop="datePublished" content="2020-05-30T23:43:53&#43;01:00" />
-<meta itemprop="dateModified" content="2020-05-30T23:43:53&#43;01:00" />
+<meta itemprop="description" content="Arduino helping you at the kitchen"><meta itemprop="datePublished" content="2020-05-30T23:43:53+01:00" />
+<meta itemprop="dateModified" content="2020-05-30T23:43:53+01:00" />
 <meta itemprop="wordCount" content="747">
-
-
-
 <meta itemprop="keywords" content="" />
-
 </head>
 <body>
 
@@ -50,7 +44,7 @@
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='/images/rai.png' alt="Profile Posts" class="rounded-logo">
+        <img src='/images/rai.png' alt="Profile Raimonster" class="rounded-logo">
       </a>
     </div>
     <h2>Hello, I'm Raimonster</h2>
@@ -187,9 +181,6 @@
     <main id="content" class="post">
 
 <h1>Fridge-O-Mattic</h1>
-
-
-
 <div class="reading-time">
   <div class="icon">
   <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
@@ -214,13 +205,8 @@
   <span>May 30, 2020</span>
 </div>
 
-
-
-
-<p><a id="org00ae6e1"></a></p>
-
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h2 id="parts">Parts:</h2>
-
 <ul>
 <li>arduino uno</li>
 <li>Ultrasonic Distance Sensor (HC-SR04)</li>
@@ -230,40 +216,29 @@
 <li>a fridge</li>
 <li>MAGNETS! (of course, the secret sauce)</li>
 </ul>
-
-<p><a id="orgd0fa99c"></a></p>
-
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h2 id="story">Story</h2>
-
 <p>Small hacky project where by installing an arduino with some very
 basic sensors, you can detect when the fridge&rsquo;s door is left open.</p>
-
 <p>Maybe you can relate, maybe not, but the fridge at my new place has
 some issues when closing the door, and sometimes it doesn&rsquo;t close
 properly (you have to make sure every time it&rsquo;s been properly
 closed, and not 99% closed)</p>
-
-<p><a id="orgc09afaf"></a></p>
-
-<h2 id="is-door-opened">is_door_opened?</h2>
-
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="is_door_opened">is_door_opened?</h2>
 <p>By installing the ultrasonic distance sensor in the frame of the
 door, we can detect what&rsquo;s the perceived distance by the sensor, and
 know if the sonar is hitting the door or not. If the sensor detects
 &lt;10 cm, we say it&rsquo;s hitting the door, so it beeps (or lights the
-leds, or makes your philips hue go crazy, your choice)&#x2026;</p>
-
-<p><a id="orgbbef4fe"></a></p>
-
+leds, or makes your philips hue go crazy, your choice)…</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h2 id="countdown">Countdown</h2>
-
 <p>Once this phase was done, next thing was to bloat that thing
 somehow, and make it &ldquo;do more&rdquo;.  So in between 10cm and 2mts,
 there&rsquo;s a big range we could be using to mean different things, so
 it could have different &ldquo;modes&rdquo;, or smthing like this. We could
 indicate that distance with a magnet, aligned to the ultrasonic
 sensor.</p>
-
 <p>The current behavior is that the measurements &gt;10cm, the
 fridge-o-mattic sets a countdown of <code>cm-10</code> minutes. The tricky part
 here is to know where a movement of the measurement is the door
@@ -274,25 +249,19 @@ measurements. To detect an intentional countdown setting we detect
 when the magnet moves (always &gt;10cm, because &lt;10 means &ldquo;door&rdquo;) for
 some time, and then it keeps steady. When it&rsquo;s steady for 5 secs, we
 then set the countdown.</p>
-
 <p>Once the countdown is set, we have a deadline when we know we&rsquo;re
 going beep (or flash, or launch the missiles).</p>
-
 <p>The ugly hacks come to set the whole thing without a button, or any
 extra feedback, because you know, after the alarm rang, you have to
 be very &lsquo;tidy&rsquo; and clean the deadline variables and preset distances
 so that fridge-o-mattic doesn&rsquo;t start a new countdown for the same
 distance as before, or a door detection messing everything up.</p>
-
 <p>For now, it kinda works. But being C (since uni I haven&rsquo;t written C
 I think), and being so PITA to update the code, I&rsquo;m leaving this
 version like this (for a v0.1 anyway) while I wait for the <a href="https://github.com/nodemcu/nodemcu-firmware">nodemcu</a>
 to arrive (Hey Lua!).</p>
-
-<p><a id="orgeb8240d"></a></p>
-
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h2 id="development">Development</h2>
-
 <p>As an extra, I got started with arduino programming and well, it was
 hard for me to get used to the IDE. First of all, it doesn&rsquo;t
 properly work with ratpoison WM. Java applications used to have
@@ -300,19 +269,15 @@ those strange issues.  The way to solve it and make the window open
 correctly was to add the magic line <code>exec wmname LG3D</code> in my
 .ratpoisonrc.  And install <code>wmname</code> on your system (thank God it is
 in the Nixos repo).</p>
-
 <p>It was not trivial to know what to do with <code>/dev/ttyUSB0</code> not being
 correctly accessed by my user. In the end it was easy, just add my
 user to the `dialout` group via <code>users.users.rgrau.extraGroups</code>.</p>
-
 <p>Installing libraries was kind of a magic thing, using the IDE
 interface without knowing much where things lived, or which paths
 were used.</p>
-
 <p>Monitoring the board using the serial port was ok, but finding out
 that I had to close the monitor window in order to upload a new
 version was a no-go.</p>
-
 <p>Emacs enters the game. Now I was kinda confortable with the other
 stuff, I went back to check how the f I could use emacs for arduino
 programming.  And there&rsquo;s the <code>arduino-mode</code>, that did most of what
@@ -320,20 +285,14 @@ I wanted, and although the monitor terminal is a bit crappy, I could
 hack it around to obvey me and I could finally reupload new code in
 a much faster way. you can install libs and compile everything from
 emacs, so great, another point for emacs.</p>
-
 <p>All in all, a good experience with something that is really working
 in the real world. Let&rsquo;s see what happens when I Get the nodemcus.</p>
-
 <p>A lot of flags in the code show I don&rsquo;t know what I&rsquo;m doing. This
 looks like it should be an FSM, because that&rsquo;s what those things
 are.</p>
-
 <p>The link: <a href="https://github.com/kidd/fridge-o-mattic">https://github.com/kidd/fridge-o-mattic</a></p>
-
-<p><a id="orgb655af7"></a></p>
-
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h2 id="links-refs-and-future-work">Links, refs, and future work</h2>
-
 <ul>
 <li><a href="https://programmingtoddler.wordpress.com/2014/11/09/c-how-to-get-system-timestamp-in-second-millisecond-and-microsecond/">https://programmingtoddler.wordpress.com/2014/11/09/c-how-to-get-system-timestamp-in-second-millisecond-and-microsecond/</a></li>
 <li><a href="https://www.instructables.com/class/LEDs-and-Lighting-Class/">https://www.instructables.com/class/LEDs-and-Lighting-Class/</a></li>
@@ -355,4 +314,3 @@ are.</p>
   
 </body>
 </html>
-

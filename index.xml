@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Aug 2019 10:27:47 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Scripting Field Guide</title>
+      <link>/post/2021-08-03-shell-field-guide/</link>
+      <pubDate>Tue, 03 Aug 2021 12:30:27 +0100</pubDate>
+      
+      <guid>/post/2021-08-03-shell-field-guide/</guid>
+      <description>I&amp;rsquo;ve been writing a booklet with many tricks related to bash/zsh scripting. The aim of it is to have a guide for non-trivial scripting.
+The link to Scripting Field Guide</description>
+    </item>
+    
+    <item>
       <title>Software Developer @Metabase</title>
       <link>/portfolio/metabase/</link>
       <pubDate>Wed, 28 Jul 2021 13:42:19 +0100</pubDate>

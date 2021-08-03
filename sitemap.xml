@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/post/</loc>
+    <lastmod>2021-08-03T12:30:27+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>/post/2021-08-03-shell-field-guide/</loc>
+    <lastmod>2021-08-03T12:30:27+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>/portfolio/</loc>
     <lastmod>2021-07-28T13:42:19+01:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -13,11 +23,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>/post/2020-07-05-racket-and-nix/</loc>
-    <lastmod>2020-07-05T17:45:12+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/post/</loc>
     <lastmod>2020-07-05T17:45:12+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
